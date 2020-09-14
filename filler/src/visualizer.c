@@ -6,7 +6,7 @@
 /*   By: sdiego <sdiego@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 17:39:47 by sdiego            #+#    #+#             */
-/*   Updated: 2020/07/27 17:16:14 by sdiego           ###   ########.fr       */
+/*   Updated: 2020/09/07 19:34:14 by sdiego           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,27 +59,27 @@ void	key_function(t_sdl *s, t_info *f)
 {
 	if (s->space == 0)
 	{
-		map_info(s, f, 0, 0);
+		map_info(f, 0, 0);
 		draw(s, f, 25, 0);
 		SDL_RenderPresent(s->ren);
 	}
 	else if (s->right == 1)
 	{
-		map_info(s, f, 0, 0);
+		map_info(f, 0, 0);
 		draw(s, f, 25, 0);
 		s->right = 0;
 		SDL_RenderPresent(s->ren);
 	}
 }
 
-int		main(int argc, char **argv)
+int		main(void)
 {
 	t_sdl	s;
 	t_info	*f;
 
 	init(&s);
 	f = init_info();
-	map_info(&s, f, 1, 0);
+	map_info(f, 1, 0);
 	s.s_x = (1000 - (f->map_size_x - 1) * s.interval) / f->map_size_x;
 	s.s_y = (1000 - (f->map_size_y - 1) * s.interval) / f->map_size_y;
 	draw(&s, f, 25, 0);

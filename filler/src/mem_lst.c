@@ -6,7 +6,7 @@
 /*   By: sdiego <sdiego@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/10/04 09:09:41 by aannara           #+#    #+#             */
-/*   Updated: 2020/07/19 16:37:07 by sdiego           ###   ########.fr       */
+/*   Updated: 2020/09/09 12:14:38 by sdiego           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,8 @@ void	new_m(void *pointer)
 	t_mem	*new;
 	t_mem	*tmp;
 
-	new = (t_mem*)malloc(sizeof(t_mem));
+	if (!(new = (t_mem*)malloc(sizeof(t_mem))))
+		exit(1);
 	new->p = pointer;
 	new->next = NULL;
 	new->last = new;
@@ -69,7 +70,8 @@ void	*mem(size_t size)
 {
 	void	*p;
 
-	p = malloc(size);
+	if (!(p = malloc(size)))
+		exit(1);
 	new_m(p);
 	return (p);
 }

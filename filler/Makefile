@@ -6,7 +6,7 @@
 #    By: sdiego <sdiego@student.21-school.ru>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/06/19 14:18:47 by sdiego            #+#    #+#              #
-#    Updated: 2020/07/27 17:16:38 by sdiego           ###   ########.fr        #
+#    Updated: 2020/09/07 19:32:45 by sdiego           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,10 +51,10 @@ $(NAME2): $(OBJ) $(OBJ_V) $(HEADERS) $(HEADERS_V)
 	gcc $(SRC_V) $(SRC) $(SDL_FLAGS) $(SDL2_LOAD) $(SDL2) $(CFLAGS) $(NAME2)
 
 .c.o: $(HEADERS) $(HEADERS_V)
-	gcc -g $(CFLAGS) $(SDL_FLAGS) -c $< -o $@
-	
+	gcc -Wall -Wextra -Werror $(CFLAGS) $(SDL_FLAGS) -c $< -o $@
+
 clean:
-	rm -fr ./src/*.o 
+	rm -fr ./src/*.o
 fclean: clean
 	rm -fr $(NAME)
 	rm -fr $(NAME2)

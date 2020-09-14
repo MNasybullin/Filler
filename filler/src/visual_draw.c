@@ -6,7 +6,7 @@
 /*   By: sdiego <sdiego@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/07/27 17:15:16 by sdiego            #+#    #+#             */
-/*   Updated: 2020/07/27 17:17:57 by sdiego           ###   ########.fr       */
+/*   Updated: 2020/09/07 19:33:31 by sdiego           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,7 +109,7 @@ void	draw(t_sdl *s, t_info *f, int x, int i)
 	draw_score(s);
 }
 
-void	map_info(t_sdl *s, t_info *f, int param, int i)
+void	map_info(t_info *f, int param, int i)
 {
 	char	*line;
 

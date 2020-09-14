@@ -6,7 +6,7 @@
 /*   By: sdiego <sdiego@student.21-school.ru>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/22 18:31:32 by sdiego            #+#    #+#             */
-/*   Updated: 2020/07/27 17:18:41 by sdiego           ###   ########.fr       */
+/*   Updated: 2020/09/07 19:34:51 by sdiego           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ void				clear_window(t_sdl *s);
 void				set_color(t_sdl *s, t_info *f, int i, int j);
 void				draw_score(t_sdl *s);
 void				draw(t_sdl *s, t_info *f, int x, int i);
-void				map_info(t_sdl *s, t_info *f, int param, int i);
+void				map_info(t_info *f, int param, int i);
 
 #endif
